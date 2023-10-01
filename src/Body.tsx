@@ -24,6 +24,9 @@ export default function Body(){
             content:"Validierung und Weiterentwicklung"
         }
     ]
+    function myCallbackFunction(info:string){
+        console.log(info)
+    }
     return(
 
             <div>
@@ -32,7 +35,8 @@ export default function Body(){
                 {
                     stepsToHtmlStudy.map((step)=>{ return <BodyEntry key={step.id}
                                                                      title={step.title}
-                                                                     content={step.content}/>})
+                                                                     content={step.content}
+                                                                     myCallback={myCallbackFunction}/>})
                 }
             </div>
 
